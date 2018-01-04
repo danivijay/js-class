@@ -5,6 +5,11 @@ var cars = [
 ];
 
 var finalVal = cars
+	.filter((car) => {return car.country==="german"})
+	.map((car) => {return car.random})
+	.reduce((prev,value) => {return (prev || 0) + value});
+/*
+var finalVal = cars
 	.filter(function(car) { 
 		return car.country==="german";
 	})
@@ -13,6 +18,7 @@ var finalVal = cars
 	})
 	.reduce(function(prev, value){
 		return (prev || 0) + value;
-	})
+	});
+*/
 
 console.log(finalVal);
